@@ -35,7 +35,7 @@ button {
 #display-container {
   background-color: #ffffff;
   padding: 3.1em 1.8em;
-  width: 80%;
+  width: 90%;
   max-width: 40em;
   margin: 0 auto;
   position: absolute;
@@ -51,6 +51,12 @@ button {
   align-items: center;
   padding-bottom: 0.6em;
   border-bottom: 0.1em solid #c0bfd2;
+}
+.flag{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 90%;
 }
 .timer-div {
   background-color: #e1f5fe;
