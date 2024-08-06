@@ -251,7 +251,7 @@ nextBtn.addEventListener(
       scoreContainer.classList.remove("hide");
       //user score
       userScore.innerHTML =
-        "Your score is " + scoreCount + " out of " + questionCount;
+        "Your score is " + scoreCount + " out of " + questionCount + "</br>You Scored " + ((100 * scoreCount) / questionCount).toFixed(3) + "%";
     } else {
       //display questionCount
       countOfQuestion.innerHTML =
