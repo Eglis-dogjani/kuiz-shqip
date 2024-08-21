@@ -8,6 +8,7 @@ let displayContainer = document.getElementById("display-container");
 let scoreContainer = document.querySelector(".score-container");
 let restart = document.getElementById("restart");
 let userScore = document.getElementById("user-score");
+const confettiContainer = document.querySelector('#confetti-container');
 let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let questionCount;
@@ -50,7 +51,7 @@ const quizArray = [
   {
     id: "4",
     question: "Guess the Country Flag on Europe?",
-    options: ["Mexico", "Italy", "Portugal", "Spain"],
+    options: ["Mexico", "Italy", "Portugal", "India"],
     correct: "Italy",
     image: "flags/it-flag.gif",
   },
@@ -140,7 +141,7 @@ const quizArray = [
   },
   {
     id: "17",
-    question: "Guess the Country Flag Island?",
+    question: "Guess the Country Flag of Island?",
     options: ["Monaco", "Australia", "United Kingdom", "Malaysia"],
     correct: "Australia",
     image: "flags/as-flag.gif",
@@ -182,7 +183,7 @@ const quizArray = [
   },
   {
     id: "23",
-    question: "Guess the Country Flag on South Africa?",
+    question: "Guess the Country Flag on South America?",
     options: ["Spain", "Colombia", "Cuba", "Costa Rica"],
     correct: "Colombia",
     image: "flags/co-flag.gif",
@@ -249,9 +250,34 @@ nextBtn.addEventListener(
       //hide question container and display score
       displayContainer.classList.add("hide");
       scoreContainer.classList.remove("hide");
+     /* //confetti Effect
+      confettiContainer.innerHTML =`
+            <div id="confetti-container">
+              <div class="card">
+                <p>Congratulations, you have successfully created a confetti</p>
+              </div>
+            </div>
+          `;
+          
+          confettiContainer.appendChild(div); */
+      //confetti show function
+      const showConfetti = () => {
+        const confetti = document.createElement('div');
+        confetti.textContent = '🏳️';
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * innerWidth + 'px';
+        confettiContainer.appendChild(confetti);
+      
+        setTimeout(() => {
+          confetti.remove();
+        }, 5000);
+      };
+      setInterval(() => {
+        showConfetti();
+      }, 400);
       //user score
       userScore.innerHTML =
-        "Your score is " + scoreCount + " out of " + questionCount + "</br>You Scored " + ((100 * scoreCount) / questionCount).toFixed(3) + "%";
+        "Your score is " + scoreCount + " out of " + questionCount + "</br>You Scored " + ((100 * scoreCount) / questionCount).toFixed(0) + "%";
     } else {
       //display questionCount
       countOfQuestion.innerHTML =

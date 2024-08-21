@@ -15,9 +15,20 @@
   <body>
     <div class="start-screen">
       <img src="welcome-screen.gif" alt="Welcome to my game!" width="95%">
-      <h2>Click In the start Button Bellow:</h2>
-      <button id="start-button">Start</button>
-    </div>
+        <h1>Thanks for trying this game!</h1><br>
+            <button id="start-button">Start The Game</button>
+      <div class="start-msg">
+        <h2>RULES OF THE GAME
+          <h3>Your goal is very simple , yet a challenging one.You will be asked to find the country name by simply watching the country Flag . What you have to do is to answer all questions. Correct answers gives the amount of points shown at the end. Incorrect answers shows you the red color. This means you lose the points of that question. At the end you shall see the User score calculated in percentage (%).</h3>
+        </h2><br>
+        <h2>Safety
+          <h3>Be careful when chosing the answer. You will have 10 seconds to answer each question,that I think is more than enough. Even if you click the wrong answer, the right one will appear in Green after the score is saved.</h3>
+        </h2>
+            <br>
+          <h2>Bonus Tip</h2>
+          <h3>Here is a simple trick to get to understand this game and score better. In order to find the question, you should answer correctly. But in somehow the answer is inside the question itself.</h3><br>    
+      </div>
+    </div>  
     <div id="display-container">
 
       <div class="header">
@@ -35,7 +46,12 @@
       <button id="next-button">Next</button>
     </div>
     <div class="score-container hide">
-      <div id="user-score">Demo Score</div>
+      <div id="confetti-container">
+        <div class="card">
+          <p>Congratulations, you finished <cite>Find the Flag</cite> questions</p>
+          <div id="user-score">Demo Score</div>
+        </div>
+      </div>
       <button id="restart">Restart</button>
     </div>
     <!-- Script -->
