@@ -1,7 +1,6 @@
 <img src="welcome-screen.gif" alt="Welcome to my game!" width="95%">
     <h2>This game is Made for Development Purposes to Improve my Javascript Knowledge!</h2><br>
 <div class="start-msg">
-        
         <h3 >RULES OF THE GAME
           <h4>Your goal is very simple , yet a challenging one.You will be asked to find the country name by simply watching the country Flag . 
             What you have to do is to answer all questions. Correct answers gives the amount of points shown at the end. Incorrect answers shows you the red color.
